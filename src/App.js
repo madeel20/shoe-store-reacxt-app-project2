@@ -39,34 +39,31 @@ function App() {
     </Router>
   );
 }
-function Home() {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
-}
 function Launch() {
   return (
+    <div className='container-fluid' style={{backgroundColor:'#F5F5F5',height:"90vh"}}>
+
+   
     <center>
       <div style={{fontFamily: 'Montserrat'}}>
       <br/><br/>
-      <Link to="" style={{textDecoration:'none',color:'black'}}><h1>Launch</h1></Link>
-      <hr/><br/>
+      <Link to="" style={{textDecoration:'none',color:'black'}}><h1>Shop</h1></Link>
+      <hr/>
       <Outlet />
       </div>
       </center>
+      </div>
   );
 }
 function LaunchIndex() {
   return (
     <div className="row">
       {Object.entries(shoes).map(([slug, { img, name }]) => (
-        <div className="col-md-4" style={{padding:'10px',}} key={slug}>
+        <div className="col-md-4" style={{padding:'10px'}} key={slug}>
          
           <Link to={`/${slug}`}>
             
-            <img width="300" src={img} alt={name} />
+            <img width="300"  src={img} alt={name} />
           </Link>
           <h4> {name}</h4>
         </div>
@@ -80,9 +77,9 @@ function LaunchShoe() {
   const shoe = shoes[slug];
   const { name, img } = shoe;
   return (
-    <div>
+    <div >
       <h1> {name} </h1>
-      <img src={img} alt={name} width="200" />
+      <img src={img} alt={name}  width="400" />
     </div>
   );
 }

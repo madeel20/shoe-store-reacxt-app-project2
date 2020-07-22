@@ -5,16 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Header() {
   return (
     <>
-      <Navbar bg="dark" sticky="top"  variant="dark">
-        <Navbar.Brand href="#home">Shoe Store</Navbar.Brand>
-        {/* <Nav className="mr-auto ">
-       <Link className="nav-link" to="/" >Home</Link>
-        <Link className="nav-link" to="launch">Launch</Link>
-        </Nav> */}
-        {/* <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-info">Search</Button>
-        </Form> */}
+      <Navbar bg="dark" style={{height:"60px",padding:'0px'}}   variant="dark">
+        <div style={{textAlign:'center',width:'100%',color:'white',fontSize:'30px'}}> <img src="logo.jpg" width="160" /></div>
       </Navbar>
     </>
   );
